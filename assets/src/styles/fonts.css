@@ -58,6 +58,10 @@ h1,h2,h3,h4,h5,p {
 
 /* Video - Background - Content */
 
+.video-container-1 {
+    padding: 15px;
+}
+
 .video-container-1 h1 {
     font-size: 100px;
     font-family: 'Montserrat';
@@ -80,7 +84,6 @@ h1,h2,h3,h4,h5,p {
     color: white;
     max-width: 500px;
     text-align: center;
-    margin: 0px;
 }
 
 /* -----------------------------Title - All Sections - Container------------------------------ */

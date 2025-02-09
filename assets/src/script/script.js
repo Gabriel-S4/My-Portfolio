@@ -30,23 +30,23 @@ window.addEventListener("resize", () => {
 
 // Skills Container buttons
 
-const floatContainer = document.getElementById("floatContainer")
-const html = document.querySelector("html")
-const body = document.querySelector("body")
-const header = document.getElementById("header")
+const floatContainer = document.getElementById("floatContainer");
+const html = document.querySelector("html");
+const body = document.querySelector("body");
+const header = document.getElementById("header");
 
 function OpenSkills(){
   floatContainer.classList.add("floatVisible")
   floatContainer.classList.remove("floatHidden")
   html.style.overflowY = `hidden`;
-  header.style.display = `none`
+  header.style.display = `none`;
 }
 
 function CloseSkills(){
   floatContainer.classList.add("floatHidden")
   floatContainer.classList.remove("floatVisible")
   html.style.overflowY = `scroll`;
-  header.style.display = `flex`
+  header.style.display = `flex`;
 }
 
 // -----------------------------------audioPlayer-------------------------------
