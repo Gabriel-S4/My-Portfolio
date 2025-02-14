@@ -1010,7 +1010,7 @@ footer {
 } */
 @media screen and (min-width:1041px) {
   .AboutMeBox {
-    height: 100vh;
+    min-height: 100vh;
   }
 
   .ProjectsBox {
