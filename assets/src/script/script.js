@@ -21,10 +21,12 @@ function menuOnOff(){
 // Menu configuration width
 
 window.addEventListener("resize", () => {
-    const larguraAtual = window.innerWidth;
-    if(larguraAtual > 800) {
+  const larguraAtual = window.innerWidth;
+    if(larguraAtual > 800){
       document.getElementById("menu").classList.add("menuOff");
       document.getElementById("menu").classList.remove("menuOn");
+    } else if(larguraAtual < 800){
+      header.style.backgroundColor = `transparent`
     }
 });
 
@@ -34,6 +36,17 @@ const floatContainer = document.getElementById("floatContainer");
 const html = document.querySelector("html");
 const body = document.querySelector("body");
 const header = document.getElementById("header");
+
+// Change header background if scroll
+window.addEventListener('scroll', function() {
+  const larguraAtual = window.innerWidth;
+  const scrollPosition = window.scrollY
+  if(scrollPosition > 200 && larguraAtual > 800){
+    header.style.background = `rgba(16, 16, 16, 0.78)`
+  } else {
+    header.style.background = `transparent`
+  }
+})
 
 function OpenSkills(){
   floatContainer.classList.add("floatVisible")

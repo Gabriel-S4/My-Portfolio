@@ -24,13 +24,15 @@ nav a {
     font-weight: 500;
     font-size: 20px;
     text-decoration: none;
-    color: white;
-    transition: ease-in-out 500ms;
-}
+    color: rgb(255, 255, 255);
+    transition: all 500ms;
 
-nav a {
     position: relative;
     transform: scale(1.1);
+}
+
+nav a:hover {
+    color: rgb(183, 19, 233);
 }
 
 nav a:before {
@@ -48,7 +50,7 @@ nav a:before {
 nav a:hover::before {
     content: "";
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(183, 19, 233);
 }
 
 h1,h2,h3,h4,h5,p {
@@ -183,8 +185,8 @@ h1,h2,h3,h4,h5,p {
 @media screen and (min-width: 800px) {
     
     nav a:not(:hover) {
-        transform: translateY(-5px);
-        filter: opacity(0.65);
+        transform: translateY(5px);
+        filter: opacity(0.85);
     }
 
     .title-section h2 {
