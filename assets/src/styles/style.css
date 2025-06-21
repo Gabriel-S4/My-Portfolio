@@ -86,14 +86,14 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 90px;
-      height: 90px;
+      width: 70px;
+      height: 70px;
       border-radius: 50%;
-      background-color: rgba(99, 99, 99, 0);
+      /* background-color: rgba(99, 99, 99, 0); */
       transition: all 1s;
       }
       .logo img {
-      height: 100px;
+      height: 80px;
       margin: 5px;
       }
 
@@ -1062,9 +1062,7 @@ footer {
     }
 
 }
-/* @media screen and (max-width:1059px) {
-  
-} */
+
 @media screen and (min-width:1041px) {
   .AboutMeBox {
     min-height: 100vh;
@@ -1157,6 +1155,11 @@ footer {
         box-shadow: 0px 0px 10px black;
     }
 
+    .logo {
+        background-color: rgba(255, 255, 255, 0.5);
+        transform: scale(1.1);
+    }
+
     header nav a:focus {
         background-color: gray;
         border: none;
@@ -1185,9 +1188,14 @@ footer {
 @media screen and (min-width: 800px) {
 
   /* Header Nav Logo */
-  .logo:hover {
+  .logo {
     background-color: rgba(255, 255, 255, 0.5);
     transform: scale(1.1);
+    }
+
+    .logo:hover {
+    background-color: rgba(118, 16, 173, 0.5);
+    box-shadow: 0px 0px 10px rgba(118, 16, 173, 0.5);
     }
 
   /* All Sections Config */
@@ -1212,7 +1220,7 @@ footer {
 
   header {
     height: 120px;
-    justify-content: space-between;
+    justify-content: end;
   }
 
       header .logo a img{
@@ -1222,12 +1230,18 @@ footer {
     header nav {
       right: 15px;
     }
+    /* header left Logo */
+
+  .logo {
+    background-color: transparent;
+    display: none;
+  }
 
     /* Home - Background Video - Content - Image */
 
-    .video-container-2 img {
-      width: 100%;
-      max-width: 200px;
+  .video-container-2 img {
+    width: 100%;
+    max-width: 200px;
   }
 
   /* AboutMe RightContainer Image */
