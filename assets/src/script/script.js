@@ -38,6 +38,16 @@ const body = document.querySelector("body");
 const header = document.getElementById("header");
 
 // Change header background if scroll
+
+  const larguraAtual = window.innerWidth;
+  const scrollPosition = window.scrollY
+
+  if(scrollPosition > 200 && larguraAtual > 800){
+    header.style.background = `rgba(16, 16, 16, 0.78)`
+  } else {
+    header.style.background = `transparent`
+  }
+  
 window.addEventListener('scroll', function() {
   const larguraAtual = window.innerWidth;
   const scrollPosition = window.scrollY

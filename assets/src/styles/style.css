@@ -3,7 +3,7 @@
     --purple: rgba(140, 0, 255, 1);
     --purple-dark: rgb(66, 0, 121);
     --purple-dark-dark: rgb(33,0,59);
-    --purple-medium: rgb(49,0,88);
+    --purple-medium: rgb(49, 0, 88);
     --purple-light: rgb(63,0,113);
     --gray-dark: rgb(20,20,20);
     --gray: rgb(31,31,31);
@@ -688,7 +688,7 @@ main {
   gap: 40px;
 }
 
-.ProjectsBox .Project {
+.ProjectsBox .Project-Cards .Project {
   width: 100%;
   height: 100vh;
   background-color: #310058;
@@ -710,8 +710,8 @@ main {
 }
 
 .Project-Cards .project {
-  width: 330px;
-  height: 300px;
+  width: 370px;
+  height: 290px;
   background-color: rgb(20,20,20);
   border-radius: 20px;
   box-shadow: 0px 0px 10px black;
@@ -725,20 +725,9 @@ main {
   overflow: hidden;
 
   position: relative;
+  display: flex;
+  justify-content: center;
 }
-
-.project .thumb .link {
-  position: absolute;
-  bottom: 0px;
-  z-index: 1;
-}
-
-.project .thumb .link svg {
-  width: 30px;
-  height: 30px;
-}
-
-
 
 .project .thumb .thumbphoto {
   width: 100%;
@@ -748,23 +737,73 @@ main {
   transition: all 500ms;
   z-index: 1;
   position: absolute;
+
+  image-rendering: pixelated;
 }
 
 .project:hover .thumb .thumbphoto{
   transform: scale(1.1);
 }
 
+/* Links - Cards */
+
+.link-icons {
+  position: absolute;
+  z-index: 2;
+  bottom: 5px;
+  width: 40%;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+
+  background-color: rgba(0, 0, 0, 0.347);
+  border-radius: 25px;
+}
+
+.link-icons a svg {
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0));
+  height: 100%;
+  width: 30px;
+
+  transition: all 500ms;
+}
+
+.project .link-icons:hover a svg {
+  transform: scale(1.1);
+  image-rendering: optimizeQuality;
+}
+
+.link-icons a:hover svg {
+  filter: drop-shadow(0px 0px 10px var(--purple));
+}
+
+.link-icons a:hover svg:his(.thumb) {
+  filter: blur(2px) brightness(0.8);
+}
+
+
+
+
+/* Description Cards */
+
 .titledescthumb h4 {
   transition: all 500ms;
   font-size: 20px;
+  cursor: default;
 }
 
 .project:hover .titledescthumb h4 {
   color: var(--purple);
+  cursor: default;
+
 }
 
 .project .titledescthumb p {
   font-size: 14px;
+  cursor: default;
 }
 
 .project .titledescthumb {
@@ -1032,7 +1071,7 @@ footer {
   }
 
   .ProjectsBox {
-    height: 100%;
+    min-height: 100dvh;
   }
 }
 
@@ -1198,7 +1237,13 @@ footer {
     margin: 20px;
     width: 80%;
   }
-    
+
+/* Projects cards */
+
+  .Project-Cards .project {
+  width: 300px;
+  height: 300px;
+  }
 }
 
 @media screen and (min-width: 700px) {
