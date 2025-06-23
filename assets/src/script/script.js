@@ -62,6 +62,7 @@ function OpenSkills(){
   floatContainer.classList.add("floatVisible")
   floatContainer.classList.remove("floatHidden")
   html.style.overflowY = `hidden`;
+  body.style.overflowY = `hidden`;
   header.style.display = `none`;
 }
 
@@ -69,6 +70,7 @@ function CloseSkills(){
   floatContainer.classList.add("floatHidden")
   floatContainer.classList.remove("floatVisible")
   html.style.overflowY = `scroll`;
+  body.style.overflowY = `auto`;
   header.style.display = `flex`;
 }
 
